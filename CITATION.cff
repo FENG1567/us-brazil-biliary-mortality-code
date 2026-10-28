@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "Please cite this code-only release and the associated manuscript. No article or archival DOI has been assigned by this release task."
+title: "US-Brazil biliary mortality: analysis and figure-generation code"
+type: software
+version: "1.0.0-code-only"
+date-released: "2026-10-29"
+repository-code: "https://github.com/FENG1567/us-brazil-biliary-mortality-code"
+url: "https://github.com/FENG1567/us-brazil-biliary-mortality-code"
+authors:
+  - family-names: Feng
+    given-names: Shuo
+  - family-names: Shi
+    given-names: Chao
+  - family-names: Liu
+    given-names: Tianming
+  - family-names: Ding
+    given-names: Haoran
+  - family-names: Hang
+    given-names: Fenghe
+  - family-names: Huang
+    given-names: Zhenghao
+  - family-names: Meng
+    given-names: Xianzhi
+    email: mengxianzhi@hrbmu.edu.cn
+license: MIT
+keywords: [mortality, multiple cause of death, death certificates, biliary disease, epidemiology]
+preferred-citation:
+  type: unpublished
+  title: "Adding certificate mentions reduces relative but widens absolute US–Brazil biliary mortality differences"
+  authors:
+    - family-names: Feng
+      given-names: Shuo
+    - family-names: Shi
+      given-names: Chao
+    - family-names: Liu
+      given-names: Tianming
+    - family-names: Ding
+      given-names: Haoran
+    - family-names: Hang
+      given-names: Fenghe
+    - family-names: Huang
+      given-names: Zhenghao
+    - family-names: Meng
+      given-names: Xianzhi
+  year: 2026
+  notes: "Scientific source package associated with the 2026-10-26 manuscript revision; this code-only release excludes study datasets. No article DOI is supplied."

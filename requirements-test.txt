@@ -1,0 +1,2 @@
+# Same NumPy version as the recorded formal inference environment.
+-r requirements.txt

@@ -1,0 +1,398 @@
+{
+  "schema": "portable_source_identity_v1",
+  "original_source_map_sha256": "f851346a371656a323ae244297ec236671d18bb0e316c0840a58bdddcdbc2cdc",
+  "original_unsanitized_compute_manifest_sha256": "41183a61478f59f48fc2b387dbd1fddd4f6d090bde6af9184b1034631e5e28a5",
+  "prepared_payload_manifest_sha256": "e820703ac2c31c6f680bbcd180d7e371b411b89e9550196d9cc698c115e4822c",
+  "code_and_helper_files": [
+    {
+      "role": "preparation_stage",
+      "package_path": "analysis/prepare_full_window.py",
+      "source_sha256": "92f97c9a7027e5c5c93b354dc0dd93c3e16da56eff5e70273a8d8057303c61da",
+      "package_sha256": "92f97c9a7027e5c5c93b354dc0dd93c3e16da56eff5e70273a8d8057303c61da",
+      "identical": true,
+      "note": "Unmodified source snapshot."
+    },
+    {
+      "role": "compute_stage",
+      "package_path": "analysis/compute_full_window.py",
+      "source_sha256": "597707621631ec8bbda2587acb583c51a7d0a4c00c0862758dd9bfe1cfa4f746",
+      "package_sha256": "597707621631ec8bbda2587acb583c51a7d0a4c00c0862758dd9bfe1cfa4f746",
+      "identical": true,
+      "note": "Unmodified source snapshot; not executed for inference during packaging."
+    },
+    {
+      "role": "publication_table_builder",
+      "package_path": "analysis/build_publication_tables.py",
+      "source_sha256": "6911e363f39546d662046c63bf62fc2cfb3c73e5455fd7aa6b0655bb6a146694",
+      "package_sha256": "6911e363f39546d662046c63bf62fc2cfb3c73e5455fd7aa6b0655bb6a146694",
+      "identical": false,
+      "note": "Portable copy changes only: package-relative default root and outputs, relative source-map snapshot resolution, and explicit hash-checked payload-exclusion identity."
+    },
+    {
+      "role": "full_window_synthetic_tests",
+      "package_path": "analysis/tests/test_full_window_direct.py",
+      "source_sha256": "7638bef4ad40c34abc05633685a9cd237a7adbcac8441f962523f02a8800686e",
+      "package_sha256": "7638bef4ad40c34abc05633685a9cd237a7adbcac8441f962523f02a8800686e",
+      "identical": true,
+      "note": "Unmodified source snapshot; eight deterministic synthetic unit tests were run, while the Poisson simulation and run_bootstrap test methods were skipped to honor the no-new-bootstrap boundary."
+    },
+    {
+      "role": "publication_table_tests",
+      "package_path": "analysis/tests/test_publication_tables.py",
+      "source_sha256": "cba778498014297e31d6c335a5ccc960ba2d8c6c82bf002c18a838620d59db34",
+      "package_sha256": "cba778498014297e31d6c335a5ccc960ba2d8c6c82bf002c18a838620d59db34",
+      "identical": false,
+      "note": "Adds focused tests for relative source-map paths and omitted-payload identity validation."
+    },
+    {
+      "role": "bridge_helper",
+      "package_path": "helpers/bridge/run_usbr_monitoring.py",
+      "source_sha256": "8240058159d7abc1eb6057350032d5af84ff636e80143de95d30ce8d24e58e6b",
+      "package_sha256": "8240058159d7abc1eb6057350032d5af84ff636e80143de95d30ce8d24e58e6b",
+      "identical": true,
+      "note": "Exact source snapshot; bridge constants are overridden by the documented preparation entry."
+    },
+    {
+      "role": "US_parser",
+      "package_path": "helpers/extension/scripts/extract_us.py",
+      "source_sha256": "b8ac39e0a07049160c833aa8cccffac9732d7834216c6d2a7632cf60d67f9c97",
+      "package_sha256": "b8ac39e0a07049160c833aa8cccffac9732d7834216c6d2a7632cf60d67f9c97",
+      "identical": true,
+      "note": "Exact source snapshot; not used for raw-to-retained replay in this package."
+    },
+    {
+      "role": "BR_parser",
+      "package_path": "helpers/extension/scripts/extract_br.py",
+      "source_sha256": "b7c575e20929b4bbaf06452bd27db2bf4e4930516b2adf0d6f99c0211d9fa7bb",
+      "package_sha256": "b7c575e20929b4bbaf06452bd27db2bf4e4930516b2adf0d6f99c0211d9fa7bb",
+      "identical": true,
+      "note": "Exact source snapshot; not used for raw-to-retained replay in this package."
+    },
+    {
+      "role": "canonical_retained_helper",
+      "package_path": "helpers/pilot/scripts/retained/run_retained_m1_m3.py",
+      "source_sha256": "37db07018ccdc237fc4fa32ecb574382c482aece5a09dc3080181d6ac9b75ba1",
+      "package_sha256": "37db07018ccdc237fc4fa32ecb574382c482aece5a09dc3080181d6ac9b75ba1",
+      "identical": true,
+      "note": "Exact source snapshot; included for source identity only and not executed."
+    },
+    {
+      "role": "analysis_contract",
+      "package_path": "contract.md",
+      "source_sha256": "fbe38389ec183a59383d664f595f19e73677a83a2cf317ef414f81395fd8ca0c",
+      "package_sha256": "fbe38389ec183a59383d664f595f19e73677a83a2cf317ef414f81395fd8ca0c",
+      "identical": true,
+      "note": "Unmodified analysis contract used by the preparation script."
+    },
+    {
+      "role": "figure_generation",
+      "package_path": "figure_scripts/create_figures.R",
+      "source_sha256": "35a04ce05919574b5851f750eec01445a8cd37ea803be6898edee89a83010906",
+      "package_sha256": "af348f168f12770fb311d77ed0b7ff291287dd0267d97a94a812ddc2119ec6ca",
+      "identical": false,
+      "note": "Source and package scripts include the Figure 2 direct-H source-map row; package copy additionally adds root-path resolution and an explicit --project-root override. Plot geometry and values are unchanged."
+    },
+    {
+      "role": "supplementary_figure_generation",
+      "package_path": "figure_scripts/create_supplementary_figure_s1.R",
+      "source_sha256": "694e4edc4906c8af1bacd51f37b89e2478eca0ae182bcf2970fdbd57d8a33d1e",
+      "package_sha256": "61698ceeda2ae6259415bc40689862315915a931ba6565e4d76889c3210d9420",
+      "identical": false,
+      "note": "Package copy changes only root-path resolution and an explicit --project-root override; plotting logic is unchanged."
+    },
+    {
+      "role": "figure_contract",
+      "package_path": "figure_scripts/FIGURE_CONTRACT.md",
+      "source_sha256": "1fe3310682590c6c58fbc5b7aabd3a7049dfbc538255a4f12c744d13c7ac8490",
+      "package_sha256": "1fe3310682590c6c58fbc5b7aabd3a7049dfbc538255a4f12c744d13c7ac8490",
+      "identical": true,
+      "note": "Unmodified final figure contract."
+    },
+    {
+      "role": "co_2023_integration",
+      "package_path": "analysis/integrate_co_2023.py",
+      "source_sha256": "0ff5b69a448d3e520a2fe1b1dae0a393a3907d0850d71c6d0172667d5123b23f",
+      "package_sha256": "0ff5b69a448d3e520a2fe1b1dae0a393a3907d0850d71c6d0172667d5123b23f",
+      "identical": false,
+      "note": "Portable CLI adaptation with package-relative defaults and relative-path metadata; arithmetic was replayed byte-identically against the existing CSV."
+    },
+    {
+      "role": "package_builder",
+      "package_path": "analysis/build_reproducibility_package.py",
+      "source_sha256": "e8a76ee20a3b18dbcda74eeed394974bfabef437b842967777a6502642dd1d2e",
+      "package_sha256": "e8a76ee20a3b18dbcda74eeed394974bfabef437b842967777a6502642dd1d2e",
+      "identical": true,
+      "note": "Portable standard-library helper; package and archive locations are explicit CLI inputs."
+    },
+    {
+      "role": "package_builder_test",
+      "package_path": "analysis/tests/test_reproducibility_package.py",
+      "source_sha256": "1df3c7dce2ad13d597e5663291581bc6c568159c6f059cdeb7c62aa7b6c2253d",
+      "package_sha256": "5630913ecd72abbf3e6bfd8c41d7e2ac9689327b198b03aaa0a3f211f29111e7",
+      "identical": true,
+      "note": "Focused tests for manifest coverage, archive checksum, ZIP integrity, and refusal to archive inside the package tree."
+    }
+  ],
+  "data_files": [
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Source_full_axis_effects_and_CIs.csv",
+      "bytes": 280290,
+      "source_sha256": "42db900d40a27733843e38f8cff452eed1f6828591b009bb02a098c38ad8fd51",
+      "package_sha256": "42db900d40a27733843e38f8cff452eed1f6828591b009bb02a098c38ad8fd51",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_2012_2024_support.csv",
+      "bytes": 36057,
+      "source_sha256": "ebe57c33a88be391c8dad61e81fc825764ff1b12e64cb9a037ddbec5b5b809d8",
+      "package_sha256": "ebe57c33a88be391c8dad61e81fc825764ff1b12e64cb9a037ddbec5b5b809d8",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_annual_overall_all_age.csv",
+      "bytes": 10904,
+      "source_sha256": "210f95446b12b7b91c38a5f8502c79eea42d6d3735a604d29f3f06e5ff4ec78f",
+      "package_sha256": "210f95446b12b7b91c38a5f8502c79eea42d6d3735a604d29f3f06e5ff4ec78f",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_K83_H_and_expH.csv",
+      "bytes": 1079,
+      "source_sha256": "d1bca2f128cb3ef015eed8f1975cdbb5092cf2a990a412a1c27c121383d8a910",
+      "package_sha256": "d1bca2f128cb3ef015eed8f1975cdbb5092cf2a990a412a1c27c121383d8a910",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_M1_focus.csv",
+      "bytes": 1536,
+      "source_sha256": "9a6a3ba96d3e22b0ab7bf74b16fabf436caadafdea3bba345072cbc320ece111",
+      "package_sha256": "9a6a3ba96d3e22b0ab7bf74b16fabf436caadafdea3bba345072cbc320ece111",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_M1_joint_all_240.csv",
+      "bytes": 73749,
+      "source_sha256": "bd2f0a039007c2a243aad76760578e1360aaf98f7261a10fa1ae23066aff5d43",
+      "package_sha256": "bd2f0a039007c2a243aad76760578e1360aaf98f7261a10fa1ae23066aff5d43",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_M1_top_positive_negative_plus_remainder.csv",
+      "bytes": 7478,
+      "source_sha256": "10fe6adfe2b9dca85e1258871d916b52a45755329730c20692cc75eb23088a98",
+      "package_sha256": "10fe6adfe2b9dca85e1258871d916b52a45755329730c20692cc75eb23088a98",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_M3_under75_contrasts.csv",
+      "bytes": 2208,
+      "source_sha256": "c8cd7db36a53159b34d3ef7b22f12933e4cbbb5441191916e1bd526a8da179fa",
+      "package_sha256": "c8cd7db36a53159b34d3ef7b22f12933e4cbbb5441191916e1bd526a8da179fa",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_M3_under75_standardized_rates.csv",
+      "bytes": 4038,
+      "source_sha256": "775467ce7411a7b717afed1d467a7c89a269e20b26a637614829ef92f31b8805",
+      "package_sha256": "775467ce7411a7b717afed1d467a7c89a269e20b26a637614829ef92f31b8805",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_primary_record_axis.csv",
+      "bytes": 18458,
+      "source_sha256": "7c09e6a758dfdc17905c9e57f35b49cfd8f53f8b920ba1c03b24331a42a203dd",
+      "package_sha256": "7c09e6a758dfdc17905c9e57f35b49cfd8f53f8b920ba1c03b24331a42a203dd",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_primary_record_restrictions.csv",
+      "bytes": 4833,
+      "source_sha256": "9f388ca81174a1edf5f9392eb891143d128517a8d2027c4318a78211286f6f48",
+      "package_sha256": "9f388ca81174a1edf5f9392eb891143d128517a8d2027c4318a78211286f6f48",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_time_0_74_six_family.csv",
+      "bytes": 7765,
+      "source_sha256": "142e3cac48dfc255d37e515016a636b74848362d028e342961f2c233ea06b274",
+      "package_sha256": "142e3cac48dfc255d37e515016a636b74848362d028e342961f2c233ea06b274",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Table1_overall_two_scales.csv",
+      "bytes": 2973,
+      "source_sha256": "86c7a290059a862159566b2863fe696356124d36892bb8eebef6ff22b02650e1",
+      "package_sha256": "86c7a290059a862159566b2863fe696356124d36892bb8eebef6ff22b02650e1",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Table2_fixed_eight_codes_two_scales.csv",
+      "bytes": 17871,
+      "source_sha256": "86f9e3cf44b944176de9d9af850cf11d30500c1b83f78847864872856574948d",
+      "package_sha256": "86f9e3cf44b944176de9d9af850cf11d30500c1b83f78847864872856574948d",
+      "identical": true
+    },
+    {
+      "role": "formal_summary_csv",
+      "package_path": "02_analysis/formal/point_estimates.csv",
+      "bytes": 22415,
+      "source_sha256": "66b8539622bdf07c718c1b7adb4b0b95d570dd86662147534cd952a1351b9e79",
+      "package_sha256": "66b8539622bdf07c718c1b7adb4b0b95d570dd86662147534cd952a1351b9e79",
+      "identical": true
+    },
+    {
+      "role": "formal_summary_csv",
+      "package_path": "02_analysis/formal/intervals_seed20261025.csv",
+      "bytes": 98118,
+      "source_sha256": "2c1e38971b23fedc1f3217f033d2b403668c5719d0024e7794aa51989f1221fe",
+      "package_sha256": "2c1e38971b23fedc1f3217f033d2b403668c5719d0024e7794aa51989f1221fe",
+      "identical": true
+    },
+    {
+      "role": "formal_summary_csv",
+      "package_path": "02_analysis/formal/intervals_seed20261026.csv",
+      "bytes": 101845,
+      "source_sha256": "0889ab23836c0dd6c4dfbbd98de8baf3832f4c6199bb30bc3bf66d0b0d1a0e19",
+      "package_sha256": "0889ab23836c0dd6c4dfbbd98de8baf3832f4c6199bb30bc3bf66d0b0d1a0e19",
+      "identical": true
+    },
+    {
+      "role": "formal_summary_csv",
+      "package_path": "02_analysis/formal/axis_sensitivity.csv",
+      "bytes": 5313,
+      "source_sha256": "4f800a3538f07d24bfc56546f4171ab028b922ea182fca9bb0b9f42c24060471",
+      "package_sha256": "4f800a3538f07d24bfc56546f4171ab028b922ea182fca9bb0b9f42c24060471",
+      "identical": true
+    },
+    {
+      "role": "formal_summary_csv",
+      "package_path": "02_analysis/formal/seed_stability.csv",
+      "bytes": 3161,
+      "source_sha256": "1b240cf0d518e17667fd1e6f642d9a56d148dbb8ee36c1de2e4ff4b9ae054451",
+      "package_sha256": "1b240cf0d518e17667fd1e6f642d9a56d148dbb8ee36c1de2e4ff4b9ae054451",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/m1_m2_m3/M1_extra_joint_DD_contributions.csv",
+      "bytes": 43034,
+      "source_sha256": "d7e718fd03e2130c74a41c31bec4b1097cd39b7090a5b6b3852d86bae374c07a",
+      "package_sha256": "d7e718fd03e2130c74a41c31bec4b1097cd39b7090a5b6b3852d86bae374c07a",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/m1_m2_m3/M1_focus_K83_PartI_malignant_DD.csv",
+      "bytes": 907,
+      "source_sha256": "042a17e088278f8176d422db8be2b617eab0c81a3cce97cdc5e2527efbe779db",
+      "package_sha256": "042a17e088278f8176d422db8be2b617eab0c81a3cce97cdc5e2527efbe779db",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/m1_m2_m3/M3_age_under75_contrasts.csv",
+      "bytes": 13233,
+      "source_sha256": "587974e47a64670cc24ec6d263e0c871cb2f850fa130bac53ff99f52359c7a25",
+      "package_sha256": "587974e47a64670cc24ec6d263e0c871cb2f850fa130bac53ff99f52359c7a25",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/m1_m2_m3/M3_age_under75_standardized_rates.csv",
+      "bytes": 185039,
+      "source_sha256": "a062e47a52ea45f0c94b66c9353837450a389be818cc496b8801fbc955569d89",
+      "package_sha256": "a062e47a52ea45f0c94b66c9353837450a389be818cc496b8801fbc955569d89",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/time_0_74/usbr_annual_standardized_rates.csv",
+      "bytes": 169417,
+      "source_sha256": "55dfe46f865de9e08151d696566879d32c2ac79a7ecd6363d9716748df238255",
+      "package_sha256": "55dfe46f865de9e08151d696566879d32c2ac79a7ecd6363d9716748df238255",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/time_0_74/usbr_monitoring_point_estimates.csv",
+      "bytes": 36804,
+      "source_sha256": "eeb0c9192f8ad40a34ac993b4e679377e4e785c153c5d00d94159f6c7e9ec227",
+      "package_sha256": "eeb0c9192f8ad40a34ac993b4e679377e4e785c153c5d00d94159f6c7e9ec227",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/time_0_74/usbr_primary_bootstrap_intervals.csv",
+      "bytes": 80770,
+      "source_sha256": "4b36407eb70d06ce29b6086f399b39635353639e377a1560914376479542752f",
+      "package_sha256": "4b36407eb70d06ce29b6086f399b39635353639e377a1560914376479542752f",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/co_2023/m5_microdata_standardized_rates.csv",
+      "bytes": 90317,
+      "source_sha256": "b41f53385c44f073f8cb49ca2e645bef8a109c5b326389ed6114d8ab6103f953",
+      "package_sha256": "b41f53385c44f073f8cb49ca2e645bef8a109c5b326389ed6114d8ab6103f953",
+      "identical": true
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/TableS4_full_joint_categories.csv",
+      "bytes": 73749,
+      "source_sha256": "bd2f0a039007c2a243aad76760578e1360aaf98f7261a10fa1ae23066aff5d43",
+      "package_sha256": "bd2f0a039007c2a243aad76760578e1360aaf98f7261a10fa1ae23066aff5d43",
+      "identical": true,
+      "note": "Byte-identical manuscript-friendly alias of Supplement_M1_joint_all_240.csv."
+    },
+    {
+      "role": "integrated_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_CO_2023_integrated_bounds.csv",
+      "bytes": 804,
+      "source_sha256": "f510a82a6d24b65bf6d6742427bce4115564b85c7b604dd90639019d02926237",
+      "package_sha256": "f510a82a6d24b65bf6d6742427bce4115564b85c7b604dd90639019d02926237",
+      "identical": true,
+      "note": "Replayed from the included summary inputs with byte-identical output."
+    },
+    {
+      "role": "figure_source_map",
+      "package_path": "03_figures_tables/figures/SOURCE_DATA_HASH_MAP.csv",
+      "bytes": 4977,
+      "source_sha256": "69d51bafbf7cb11855069768e22524689e97a6d79e088660ed42136cf548423c",
+      "package_sha256": "69d51bafbf7cb11855069768e22524689e97a6d79e088660ed42136cf548423c",
+      "identical": true
+    },
+    {
+      "role": "reused_summary_csv",
+      "package_path": "02_analysis/reused/model_sensitivity/exclude_2024_vintage_sensitivity.csv",
+      "bytes": 9658,
+      "source_sha256": "5cf33a7582254475a1cce46e0c62143269e44cb23404ef8efe7d3a7a872f8416",
+      "package_sha256": "5cf33a7582254475a1cce46e0c62143269e44cb23404ef8efe7d3a7a872f8416",
+      "identical": true,
+      "note": "Previously generated 2012-2023 legacy HC1 model sensitivity; not recalculated."
+    },
+    {
+      "role": "aggregate_publication_csv",
+      "package_path": "03_figures_tables/source_data/Supplement_legacy_2012_2023_model_sensitivity.csv",
+      "bytes": 9658,
+      "source_sha256": "5cf33a7582254475a1cce46e0c62143269e44cb23404ef8efe7d3a7a872f8416",
+      "package_sha256": "5cf33a7582254475a1cce46e0c62143269e44cb23404ef8efe7d3a7a872f8416",
+      "identical": true,
+      "note": "Byte-identical source-data copy of the legacy HC1 model sensitivity; not a Poisson event-process bootstrap."
+    }
+  ]
+}

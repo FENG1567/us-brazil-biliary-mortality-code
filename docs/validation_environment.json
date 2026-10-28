@@ -1,0 +1,25 @@
+{
+  "export_scope": "Validation figures below describe the companion complete candidate. This code-only export runs 25 tests and explicitly skips one external population-fixture test; it has no research data or figure PDFs.",
+  "validation_date": "2026-10-26",
+  "python": "3.12.14",
+  "numpy": "1.26.4",
+  "os": "Windows 11",
+  "isolated_environment": true,
+  "R": "4.3.1",
+  "R_packages": {"ggplot2": "3.4.3", "patchwork": "1.1.3", "svglite": "2.1.3", "ragg": "1.2.5", "openssl": "2.1.0"},
+  "validation": {
+    "core_tests_passed": 17,
+    "portable_synthetic_residence_tests_passed": 5,
+    "public_adapter_tests_passed": 4,
+    "regenerated_aggregate_csvs_byte_identical": 15,
+    "regenerated_figure_pdfs": 5,
+    "population_denominator_csvs_byte_identical": 2,
+    "external_cache_adapter_test_reference_csvs_byte_identical": 4
+  },
+  "limitations": [
+    "No new raw-file scan or formal inference was run while packaging.",
+    "Private-cache adapter tests used an external fixture not distributed here.",
+    "The code-only export skips the population-fixture test when data are absent.",
+    "Cloud GitHub Actions has not run before repository creation."
+  ]
+}

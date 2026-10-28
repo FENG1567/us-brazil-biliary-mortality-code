@@ -1,0 +1,35 @@
+# Never commit individual records, credentials, local runs, or caches.
+data/raw/
+data/external/
+data/retained/
+revision/external/
+analysis/prepared_payload/
+**/joint_patterns.csv*
+**/usbr_joint_patterns.csv*
+**/candidate_records_*
+**/*_retained.csv.gz
+**/draws_seed*.csv*
+outputs/
+local_config.json
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+__pycache__/
+*.py[cod]
+.venv/
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+Thumbs.db
+~$*
+*.zip
+*.7z
+*.parquet
+
+# Fine municipality files are excluded from this public candidate.
+**/Revision_residence_code_year_aggregate.csv
+**/Revision_residence_class_age_sex_eligible_strata.csv

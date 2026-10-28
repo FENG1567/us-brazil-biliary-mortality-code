@@ -1,0 +1,3 @@
+# Statistical provenance is byte-bound, including original CRLF CSV/source files.
+# Do not normalize line endings during Git ingestion or checkout on any OS.
+* -text

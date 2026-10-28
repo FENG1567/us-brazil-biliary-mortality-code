@@ -1,0 +1,55 @@
+{
+  "schema": "revision_adapter_inputs_v1",
+  "files": {
+    "residence_audit_source": {
+      "path": "revision/code/audit_residence_missing.py",
+      "sha256": "d74e7fdc9e43e0179a6820f3153b2776e511e98652e8a403876c5d8086aecc29"
+    },
+    "br_parser_source": {
+      "path": "helpers/extension/scripts/extract_br.py",
+      "sha256": "b7c575e20929b4bbaf06452bd27db2bf4e4930516b2adf0d6f99c0211d9fa7bb"
+    },
+    "us_parser_source": {
+      "path": "helpers/extension/scripts/extract_us.py",
+      "sha256": "b8ac39e0a07049160c833aa8cccffac9732d7834216c6d2a7632cf60d67f9c97"
+    },
+    "frozen_population_936": {
+      "path": "data/metadata/population.csv",
+      "sha256": "dab349662bf88652443ee78c1c0fc9de8b384171eb0a0d8564d7900a339d1851"
+    },
+    "who18_weights": {
+      "path": "data/metadata/who_2000_2025_18_group_weights_correct.csv",
+      "sha256": "5922fabf2758762c188eb91dae5e745d9328fee4978debef8e01f4bb9d5f9ba9"
+    },
+    "population_runner_source": {
+      "path": "revision/code/run_population_sensitivity.py",
+      "sha256": "ed925abb972da20fb4d05df2557abdb4a0d64a5bd1aadff8eec6e585404239ce"
+    },
+    "population_bridge_helper": {
+      "path": "helpers/bridge/run_usbr_monitoring.py",
+      "sha256": "8240058159d7abc1eb6057350032d5af84ff636e80143de95d30ce8d24e58e6b"
+    },
+    "census_intercensal_2010_2020": {
+      "path": "data/population_sources/nc-est2020int-agesex-res.csv",
+      "sha256": "494672c99edd48ebc3f8052a0fdae54083ef7bc1467d9c5394de47cd8a1525e3"
+    },
+    "census_postcensal_2020": {
+      "path": "data/population_sources/nc-est2020-agesex-res.csv",
+      "sha256": "03d7376535ae0e15233f40758e84f7692e2669452f7d2da71968eb4a3269e30b"
+    },
+    "census_postcensal_2024": {
+      "path": "data/population_sources/nc-est2024-agesex-res.csv",
+      "sha256": "fbb151e8ae8554283dcbf192e6b420658ea444ee7d8849988aa1d5615183edf1"
+    },
+    "census_postcensal_2025": {
+      "path": "data/population_sources/nc-est2025-agesex-res.csv",
+      "sha256": "6436d4f6972d415caf14cb20776807bc031fc9f1bfc9d6ff26055d592a2b0230"
+    }
+  },
+  "excluded_external_roles": {
+    "residence_aggregate_cache": "revision/external/residence_missing_reconstructed_aggregate_cache.json",
+    "population_pattern_file": "revision/external/usbr_joint_patterns.csv",
+    "population_baseline_intervals": "revision/external/usbr_primary_bootstrap_intervals.csv"
+  },
+  "scope": "Bundled source/population inputs only; no private cache or event-pattern inputs"
+}

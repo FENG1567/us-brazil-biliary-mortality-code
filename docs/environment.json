@@ -1,0 +1,32 @@
+{
+  "schema": "usbr_mcod_reproducibility_environment_v1",
+  "formal_execution_recorded": {
+    "python_version": "3.12.3",
+    "numpy_version": "1.26.4",
+    "pandas_version": "2.1.4",
+    "scipy_version": "1.11.4",
+    "numpy_required_for_compute": true,
+    "native_threads_requested": 8,
+    "python_workers": 1,
+    "blas": "OpenBLAS 0.3.26, pthreads, 8 threads",
+    "bootstrap_draws_per_seed": 50000,
+    "formal_seeds": [
+      20261025,
+      20261026
+    ],
+    "formal_run_repeated_during_packaging": false
+  },
+  "local_package_validation": {
+    "python_version": "3.12.14",
+    "numpy_version": "2.5.2",
+    "pandas_version": "3.0.1",
+    "scipy_installed": false,
+    "validation_scope": "five publication-table tests and eight deterministic synthetic full-window tests; stochastic resampling tests, formal inference, and raw-data replay were not run"
+  },
+  "runtime_notes": [
+    "The table builder uses only the Python standard library.",
+    "The preparation stage uses the standard library and bundled bridge helpers.",
+    "NumPy is required by compute_full_window.py and the synthetic analysis tests.",
+    "The recorded formal run used NumPy 1.26.4; pandas and SciPy were present in that environment but are not dependencies of the bundled preparation, compute, or table-builder scripts."
+  ]
+}
